@@ -24,6 +24,7 @@ public class DogsActivity extends AppCompatActivity {
     private ImageModel model;
     private PuppyAdapter adapter;
     private String textFromTv;
+    private String[] url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class DogsActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ImageModel> call, Response<ImageModel> response) {
                 model = response.body();
+                url=response.body().getMessage();
                 setUpRecyclerView();
 
             }
@@ -74,7 +76,7 @@ public class DogsActivity extends AppCompatActivity {
 
     public void setUpRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.puppyRecyclerview);
-        PuppyAdapter adapter= new PuppyAdapter(model);
+        PuppyAdapter adapter= new PuppyAdapter(getApplicationContext(),url);
         GridLayoutManager layoutManager=new GridLayoutManager(getApplicationContext(),2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

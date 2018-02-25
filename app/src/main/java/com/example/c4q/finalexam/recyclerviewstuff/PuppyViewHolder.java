@@ -21,25 +21,12 @@ public class PuppyViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
         puppyView=itemView.findViewById(R.id.puppyiamge);
     }
-    public void onBind(final ImageModel model){
-        final int lengthView=model.getMessage().length;
-        for (int i = 0; i < lengthView; i++) {
-            final String pica=model.getMessage()[i];
-            Picasso.with(itemView.getContext()).load(model.getMessage()[i]).into(puppyView);
-            Log.d("viewholder", "onBind: "+model.getMessage()[i]);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent= new Intent(itemView.getContext().getApplicationContext(),PhotosActivity.class);
-                   intent.putExtra("photoId",pica);
-                   itemView.getContext().startActivity(intent);
-
-
-                }
-            });
+    public void onBind( String dogUrl){
+            Picasso.with(itemView.getContext())
+                    .load(dogUrl).into(puppyView);
 
 
         }
 
     }
-}
+

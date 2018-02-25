@@ -1,11 +1,14 @@
 package com.example.c4q.finalexam.recyclerviewstuff;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.c4q.finalexam.ImageModel;
+import com.example.c4q.finalexam.PhotosActivity;
 import com.example.c4q.finalexam.R;
 
 /**
@@ -13,9 +16,11 @@ import com.example.c4q.finalexam.R;
  */
 
 public class PuppyAdapter extends RecyclerView.Adapter<PuppyViewHolder> {
-    private ImageModel model;
+    private String[] model;
+    private Context context;
 
-    public PuppyAdapter(ImageModel model) {
+    public PuppyAdapter(Context context,String[]  model) {
+        this.context=context;
         this.model = model;
     }
 
@@ -28,12 +33,22 @@ public class PuppyAdapter extends RecyclerView.Adapter<PuppyViewHolder> {
 
     @Override
     public void onBindViewHolder(PuppyViewHolder holder, int position) {
-        holder.onBind(model);
+        final String  pojo= model[position];
+        holder.onBind(pojo);
+        holder.puppyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(context, PhotosActivity.class);
+                intent.putExtra("photoId",pojo);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return model.getMessage().length;
+        return model.length;
     }
 }
+g
