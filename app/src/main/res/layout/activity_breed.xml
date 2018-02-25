@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.c4q.finalexam.BreedActivity">
+
+    <TextView
+        android:id="@+id/welcomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview1"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/terrier"
+                android:text="terrier"
+                android:layout_width="200dp"
+                android:textSize="50sp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/dogview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview2"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/spaniel"
+                android:text="spaniel"
+                android:layout_width="200dp"
+                android:textSize="50sp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/dogview2"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview3"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/retriever"
+                android:text="retriever"
+                android:layout_width="200dp"
+                android:textSize="50sp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/dogview3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+            />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview4"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/poodle"
+                android:layout_width="200dp"
+                android:text="poodle"
+                android:textSize="50sp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/dogview4"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
