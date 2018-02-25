@@ -11,4 +11,8 @@ import retrofit2.http.Path;
 public interface BreedService {
     @GET("api/breed/{breed-name}/images/random")
     Call<ModelPuppy> getPuppies(@Path("breed-name") String breedname);
+
+    @GET("api/breed/{breed-name}/images")
+    Call<ImageModel> getImage(@Path("breed-name") String image);
+
 }
