@@ -51,4 +51,4 @@ public class PuppyAdapter extends RecyclerView.Adapter<PuppyViewHolder> {
         return model.length;
     }
 }
-g
+//kbjancj
